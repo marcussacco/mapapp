@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wehver</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" type="text/css" href="mapStyles.css">
+
+  </head>
+  <body>
+    <div id='map'></div>
+
+    <div id='mainContain'>
+      <section id='topThird'>
+        <!-- Current Conditions -->
+        <div id='topLeft' class='topCell'>
+          <section id='currentBox'>
+            <p id='currentTemp'></p>
+            <p id='degrees'>D  E  G  R  E  E  S</p>
+            <p id='currentCondition'><p>
+          </section>
+
+          <!-- Toggle F/C -->
+          <div id='tempUnitToggle'>
+            <div class='toggleBox'>
+              <p id='fahrenheit' class='tempUnit'>
+                F
+              </p>
+              <p id='celsius' class = 'tempUnit'>
+                C
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Current Location -->
+        <div id='topMid' class='topCell'>
+          <section id='locationBox'>
+            <p id='city'></p>
+            <p id='state'></p>
+          </section>
+        </div>
+
+        <!-- Wind Information -->
+        <div id='topRight' class='topCell'>
+          <section id='windBox'>
+            <div id='compassContainer'>
+              <div id='compassRing'>
+                <div id='bezel'>
+                  <div id='pointerContain'>
+                    <div id='pointer'>
+                    </div>
+                  </div>
+                  <div id='direction'>
+                  </div>
+                </div>
+              </div>
+              <p id='windSpeed'><p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- 12 hour temperature Forecast -->
+      <div id='hourBox'>
+        <canvas id="hourly" width="375"></canvas>
+      </div>
+
+      <section id='forecast'>
+        <!-- Multi-day Forecast (no whitespace)-->
+        <div id='weekBox'>
+          <div class='day'>
+            <p class='dayName'></p>
+            <div class='temps'>
+              <p class='high'></p>
+              <p class='low'></p>
+            </div>
+            <p class='condition'></p>
+          </div><div class='day'>
+            <p class='dayName'></p>
+            <div class='temps'>
+              <p class='high'></p>
+              <p class='low'></p>
+            </div>
+            <p class='condition'></p>
+          </div><div class='day'>
+            <p class='dayName'></p>
+            <div class='temps'>
+              <p class='high'></p>
+              <p class='low'></p>
+            </div>
+            <p class='condition'></p>
+          </div><div class='day'>
+            <p class='dayName'></p>
+            <div class='temps'>
+              <p class='high'></p>
+              <p class='low'></p>
+            </div>
+            <p class='condition'></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="attribution">
+      <a href="http://www.wunderground.com" target="_blank"><img src="wunderground.png"></a>
+      <p>Powered by Weather Underground.</p>
+    </div>
+
+    <script src='functionCleaner.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvs0hUCFVBwpLs5eOuIKxZaP0toYcmkoI&callback=initMap" async defer></script>
+  </body>
+</html>
